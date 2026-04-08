@@ -22,13 +22,55 @@
           {
             "group": "Getting started",
             "pages": [
-              "index"
+              "index",
+              "getting-started/account-setup",
+              "getting-started/my-projects",
+              "getting-started/editing-account",
+              "getting-started/changing-password"
+            ]
+          },
+          {
+            "group": "Launching a project",
+            "pages": [
+              "launching-a-project/overview",
+              "launching-a-project/project-name",
+              "launching-a-project/site-address",
+              "launching-a-project/site-area",
+              "launching-a-project/drawing-site-area",
+              "launching-a-project/setbacks-adjacency",
+              "launching-a-project/hotel-brand"
+            ]
+          },
+          {
+            "group": "Working with designs",
+            "pages": [
+              "working-with-designs/generating-designs",
+              "working-with-designs/assumptions",
+              "working-with-designs/filtering-sorting",
+              "working-with-designs/executive-summary",
+              "working-with-designs/export",
+              "working-with-designs/3d-viewer",
+              "working-with-designs/site-plan-viewer",
+              "working-with-designs/floor-plans",
+              "working-with-designs/brand-contact"
             ]
           },
           {
             "group": "Tutorials",
             "pages": [
               "tutorials/zoning-panel"
+            ]
+          },
+          {
+            "group": "Brands",
+            "pages": [
+              "brands/overview"
+            ]
+          },
+          {
+            "group": "FAQs",
+            "pages": [
+              "faqs"
             ]
           },
           {
