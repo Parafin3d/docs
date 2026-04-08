@@ -1,18 +1,48 @@
 ---
 title: "3D Building Viewer"
-description: "Rotate, mirror, and reposition the selected building on its site."
+description: "Manipulate the selected building in 3D, toggle map views, and snapshot your results."
 ---
 
-Move the selected design in place on its site using the **viewer toolbar** in the top-left corner of the canvas:
-
-- **Rotate** around the site center
-- **Mirror** across a chosen axis
-- **Translate** to reposition within the site
-
-Navigation controls (pan, zoom, reset view) live in the **bottom-right corner** of the viewer.
-
-Property constraints turn red when violated — you see issues the moment they happen.
+The 3D Building Viewer lets you move the selected design in place on its site and see how it responds to site constraints.
 
 <Frame>
   <img src="/images/support/legacy/designs/3d-view.png" alt="3D Building Viewer" />
 </Frame>
+
+## Viewer toolbar
+
+The viewer toolbar sits in the **top-left corner** and centralizes the key design actions:
+
+- **Undo / redo** recent changes
+- **Mirror building** across a chosen axis
+- **Edit site boundaries and setbacks** without leaving the viewer
+- **Create a snapshot** of the current view for reports or exports
+
+<Frame caption="Viewer toolbar in the top-left corner">
+  <img src="/images/releases/1.58/viewer_toolbar.png" alt="The viewer toolbar in the top-left corner of the canvas" />
+</Frame>
+
+<Frame caption="Toolbar actions in context">
+  <img src="/images/releases/1.58/viewer_toolbar_detail.png" alt="Close-up of the viewer toolbar actions" />
+</Frame>
+
+## Viewer controls
+
+Navigation controls live in the **bottom-right corner** of the viewer:
+
+- **Toggle** between Street View and 3D Satellite view
+- **Re-center** your site in the viewer
+- **North arrow** to orient your bearings
+- **Zoom** in and out
+
+<Frame caption="Viewer controls in the bottom-right corner">
+  <img src="/images/releases/1.58/viewer_controls.png" alt="The viewer controls in the bottom-right corner" />
+</Frame>
+
+<Frame caption="Viewer controls in context">
+  <img src="/images/releases/1.58/viewer_controls_detail.png" alt="Close-up of the viewer controls" />
+</Frame>
+
+## Constraint warnings
+
+Property constraints turn red when violated — you see issues the moment they happen as you rotate or reposition the building.

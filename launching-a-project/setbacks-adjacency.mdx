@@ -1,6 +1,6 @@
 ---
 title: "Setbacks and adjacency"
-description: "Set required setbacks and adjacency conditions for each side of your site."
+description: "Set required setbacks and adjacency rules for each side of your site — during project creation and after."
 ---
 
 Once your site is defined, each side is labeled. Set adjacency and setback rules independently for each side — the map outline updates in real time as you type.
@@ -9,6 +9,46 @@ Once your site is defined, each side is labeled. Set adjacency and setback rules
   <img src="/images/support/legacy/launching/setbacks.png" alt="Setbacks and adjacency panel with labeled site sides" />
 </Frame>
 
-## Editing setbacks later
+## Editing setbacks after project creation
 
-You don't have to get setbacks right the first time. After the project is created, edit them from the **Setbacks** panel — open it from the setbacks button in the top toolbar, or by clicking anywhere in the project information side panel. The panel also lets you group adjacent sides together to simplify setback labeling on complex parcels. See the [1.59 release notes](/changelog) for details.
+You don't have to get setbacks right the first time. Open the **Setbacks** panel from either the setbacks button in the top toolbar or by clicking anywhere in the project information side panel.
+
+<Frame caption="Opening the Setbacks panel from the top toolbar">
+  <img src="/images/releases/1.59/Release_1-59-1b.gif" alt="Opening the Setbacks panel from the toolbar" />
+</Frame>
+
+<Frame caption="Opening the Setbacks panel from the project information side panel">
+  <img src="/images/releases/1.59/Release_1-59-2b.gif" alt="Opening the Setbacks panel from the side panel" />
+</Frame>
+
+## Adjusting setback distances
+
+Adjust individual setback distances inside the panel. Changes apply to the site footprint in the viewer in real time.
+
+<Frame caption="Adjusting individual setback distances">
+  <img src="/images/releases/1.59/Release_1-59-5-1.gif" alt="Adjusting setback distances in the Setbacks panel" />
+</Frame>
+
+## Simplifying complex parcels
+
+County parcel geometry sometimes produces more sides than you need. Group adjacent sides together to reduce the number of distinct setback labels you have to manage.
+
+<Frame caption="Grouping adjacent parcel sides to simplify setback labeling">
+  <img src="/images/releases/1.59/Release_1-59-4b.gif" alt="Grouping adjacent sides together in the Setbacks panel" />
+</Frame>
+
+## Using zoning-suggested setback values
+
+When zoning data is available for your site, Parafin displays suggested zoning values for front, side, and rear setbacks. Apply them as-is or adjust using the slider or text field — the site footprint updates in real time.
+
+<Frame caption="Suggested zoning setback values applied to front, side, and rear">
+  <img src="/images/releases/1.61/setback_define.gif" alt="Defining setbacks using suggested zoning values" />
+</Frame>
+
+Assign each labeled boundary to a front, rear, or side yard. Parafin applies the matching zoning setback value to each designated edge.
+
+<Frame caption="Assigning labeled setback values to each edge of the site">
+  <img src="/images/releases/1.61/setback_sides.gif" alt="Assigning setback values to labeled site edges" />
+</Frame>
+
+For more on zoning data, see the [Zoning Panel tutorial](/tutorials/zoning-panel).
