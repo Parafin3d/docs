@@ -4,8 +4,14 @@
   "name": "Parafin",
   "colors": {
     "primary": "#234BA2",
-    "light": "#5E7FCC",
+    "light": "#B2C6FD",
     "dark": "#1c3d5a"
+  },
+  "background": {
+    "color": {
+      "light": "#F9F9FF",
+      "dark": "#1A1C22"
+    }
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -36,8 +42,8 @@
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
   },
   "navbar": {
     "links": [
