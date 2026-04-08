@@ -11,25 +11,240 @@ description: "What's new in Parafin"
   Full details when 1.62 ships.
 </Update>
 
-<Update label="1.61" description="December 30, 2025" tags={["feature", "zoning"]}>
+<Update label="1.61" description="December 30, 2025" tags={["feature", "zoning", "pcf"]}>
   ## Zoning Integration
 
-  We've integrated zoning data directly into the Parafin workflow for sites across the United States and Canada.
+  We've spent the past several months redesigning core parts of Parafin so zoning data can be integrated intuitively across the United States and Canada. Release 1.61 introduces the first phase of that system and brings zoning directly into your workflow. All zoning capabilities remain free for existing Parafin users throughout this period.
 
-  - **New Zoning Panel** — district codes, dimensional controls, and source links in one place. [Learn more →](/tutorials/zoning-panel)
-  - **Zoning Filters** — apply FAR, height, and open space constraints with a single click
-  - **Setbacks with Zoning** — pull suggested front, side, and rear setbacks from zoning data
-  - **Project Creation Progress Bar** — clearer context as you move through project setup
+  ### New Zoning Panel
 
-  Zoning data is sourced from Zoneomics and refreshed weekly. Coverage spans the US and Canada.
+  The new Zoning Panel brings all available zoning information for your site into a single, easy-to-navigate location. Open it by clicking anywhere in the project information section and expanding the Zoning section. You'll see the district code, description, zoning type, and a direct link to the municipal zoning source, followed by the key dimensional controls that influence feasibility.
+
+  <Frame caption="The new Zoning Panel with district code, zoning type, source link, and dimensional controls">
+    <img src="/images/releases/1.61/zoning_panel.gif" alt="Walkthrough of the new Zoning Panel inside a project" />
+  </Frame>
+
+  [Learn more →](/tutorials/zoning-panel)
+
+  ### Zoning Filters
+
+  Zoning Filters let you apply zoning requirements to your project with a single click. Constraints such as FAR, maximum building height, and minimum open space can be reviewed and applied directly from the zoning panel. Each constraint displays a suggested zoning value — apply it immediately, enter your own value using the text field or slider, or turn zoning controls off entirely for that metric. Activating a filter updates your project assumptions in real time, and your variant generations adjust accordingly.
+
+  <Frame caption="Applying FAR, height, and open-space constraints directly from the zoning panel">
+    <img src="/images/releases/1.61/control_filters.gif" alt="Toggling and applying Zoning Filters in the panel" />
+  </Frame>
+
+  ### Defining Setbacks with Zoning
+
+  Setbacks are now fully integrated into the zoning workflow. When zoning data is available for your site, Parafin displays suggested zoning values for front, side, and rear setbacks. Apply them directly or adjust using the slider or text field — the site footprint in the viewer responds in real time.
+
+  <Frame caption="Suggested zoning setback values applied to front, side, and rear">
+    <img src="/images/releases/1.61/setback_define.gif" alt="Defining setbacks using suggested zoning values" />
+  </Frame>
+
+  Assign setback values to the appropriate edges of the site. Each boundary is labeled, and you select which sides correspond to front, rear, and side yards. Parafin then applies the zoning setback values to each designated edge.
+
+  <Frame caption="Assigning labeled setback values to each edge of the site">
+    <img src="/images/releases/1.61/setback_sides.gif" alt="Assigning setback values to labeled site edges" />
+  </Frame>
+
+  ### Zoning Data Coverage
+
+  Parafin's zoning experience is powered by data sourced from Zoneomics, which aggregates and standardizes zoning and land-use information across the United States and Canada. Zoning data refreshes weekly. Coverage is broad but not universal — if your site doesn't show zoning data, let us know and we'll make sure it's added in the next weekly update.
+
+  <Frame caption="Zoneomics coverage across the United States and Canada">
+    <img src="/images/releases/1.61/zoneomics_coverage.jpg" alt="Map of Zoneomics zoning data coverage" />
+  </Frame>
+
+  ### Project Creation Progress Bar
+
+  As part of preparing the platform for deeper zoning integration, we've redesigned the project creation flow to be more structured and transparent. This release introduces the first element of that redesign: a new progress bar that clearly shows where you are in the project creation process. It reflects each major step — location, site definition, setbacks, and brand selection — giving you clearer context as you move through setup.
+
+  <Frame caption="New project creation progress bar">
+    <img src="/images/releases/1.61/project_progress_bar.png" alt="Project creation progress bar showing each step of setup" />
+  </Frame>
 </Update>
 
-<Update label="1.59" description="November 18, 2025" tags={["improvement", "variants"]}>
-  ## Variant generation improvements
+<Update label="1.59" description="October 17, 2025" tags={["feature", "improvement", "editor", "coming soon"]}>
+  ## New Setbacks Panel
 
-  Variant generation is now significantly faster and produces more diverse layouts on complex parcels.
+  As we prepared for the integration of zoning data in future releases, 1.59 overhauled how you control site setbacks in Parafin. Instead of editing setbacks on a completely different screen, you can now make those changes without leaving your project dashboard.
 
-  - 40% faster generation on parcels with mixed setback requirements
-  - New "compact" variant style for tight urban infill sites
-  - Improved handling of irregular parcel shapes
+  Open the new Setbacks panel in two ways: by clicking the setbacks button in the top toolbar, or by clicking anywhere in the project information section in the side panel.
+
+  <Frame caption="Opening the Setbacks panel from the top toolbar">
+    <img src="/images/releases/1.59/Release_1-59-1b.gif" alt="Opening the new Setbacks panel from the toolbar" />
+  </Frame>
+
+  <Frame caption="Opening the Setbacks panel from the project information side panel">
+    <img src="/images/releases/1.59/Release_1-59-2b.gif" alt="Opening the Setbacks panel from the side panel" />
+  </Frame>
+
+  ### Instructions dialogs
+
+  As we release new features and updates, we'll include instructions dialogs to help you use Parafin. Dismiss any instructions dialog by clicking the **X** button.
+
+  <Frame caption="New inline instructions dialog">
+    <img src="/images/releases/1.59/Release_1-59-3.png" alt="Instructions dialog for a new feature" />
+  </Frame>
+
+  ### Side grouping for simplified setbacks
+
+  Sometimes parcel geometry provided by counties is more complex than it needs to be, and you end up with more sides than you need. You can now simplify the labeling of your sides by grouping adjacent sides together.
+
+  <Frame caption="Grouping adjacent parcel sides to simplify setback labeling">
+    <img src="/images/releases/1.59/Release_1-59-4b.gif" alt="Grouping adjacent sides together in the Setbacks panel" />
+  </Frame>
+
+  ### Adjusting setback distances
+
+  Dial in individual setback distances directly inside the panel. Changes apply immediately to your site footprint in the viewer.
+
+  <Frame caption="Adjusting individual setback distances in the panel">
+    <img src="/images/releases/1.59/Release_1-59-5-1.gif" alt="Adjusting setback distances in the Setbacks panel" />
+  </Frame>
+
+  ### Coming soon: Zoning Integration
+
+  One of the most anticipated features is almost here. For the next release, we've integrated zoning data throughout the US — understand the zoning of your sites right in Parafin, without digging through zoning maps and code books. In subsequent releases, setbacks and project filters can be defined by site-specific zoning data.
+
+  <Frame caption="Preview of upcoming zoning integration">
+    <img src="/images/releases/1.59/Release_1-59-6.png" alt="Preview of the upcoming zoning integration" />
+  </Frame>
+</Update>
+
+<Update label="1.58" description="September 2, 2025" tags={["feature", "improvement", "editor"]}>
+  ## Smarter Viewer Toolbar
+
+  Release 1.58 introduces a streamlined viewer experience with a new toolbar, refreshed controls, and the addition of Extended Stay America Premier Suites as a prototype brand.
+
+  ### Viewer Toolbar
+
+  As part of improving the overall design experience, we've introduced a toolbar in the top-left corner of the viewer. It centralizes the key actions in one place:
+
+  - **Undo / redo**
+  - **Mirror building**
+  - **Edit site boundaries and setbacks**
+  - **Create a snapshot** of the current view
+
+  <Frame caption="New viewer toolbar in the top-left corner">
+    <img src="/images/releases/1.58/viewer_toolbar.png" alt="The new viewer toolbar in the top-left corner of the canvas" />
+  </Frame>
+
+  <Frame caption="Toolbar actions in context">
+    <img src="/images/releases/1.58/viewer_toolbar_detail.png" alt="Close-up of the viewer toolbar actions" />
+  </Frame>
+
+  ### Viewer Controls
+
+  We've also refreshed the controls in the bottom-right corner of the viewer for easier navigation:
+
+  - **Toggle** between Street View and 3D Satellite view
+  - **Re-center** your site in the viewer
+  - **North arrow** to orient your bearings
+  - **Zoom** in or out
+
+  <Frame caption="Refreshed viewer controls in the bottom-right corner">
+    <img src="/images/releases/1.58/viewer_controls.png" alt="The refreshed viewer controls in the bottom-right corner" />
+  </Frame>
+
+  <Frame caption="Viewer controls in context">
+    <img src="/images/releases/1.58/viewer_controls_detail.png" alt="Close-up of the refreshed viewer controls" />
+  </Frame>
+
+  ## Brand Updates
+
+  ### Extended Stay America Premier Suites (prototype)
+
+  By popular demand, Extended Stay America Premier Suites is now available in Parafin as a prototype-only brand. One of the most frequently requested additions, ESA Premier Suites brings the elevated extended-stay concept into the platform. While currently limited to prototype designs, we're looking forward to training the model for full generative support in the near future.
+
+  <Frame caption="ESA Premier Suites prototype in the brand selector">
+    <img src="/images/releases/1.58/esa_premier_suites.png" alt="Extended Stay America Premier Suites prototype brand" />
+  </Frame>
+</Update>
+
+<Update label="1.57" description="July 15, 2025" tags={["feature", "improvement", "editor"]}>
+  ## Smarter Menus, Filters, and Editing Assumptions
+
+  Release 1.57 focuses on a cleaner user interface for menus, filtering, and editing assumptions — plus new brand additions.
+
+  ### Main Menu
+
+  Some users reported they weren't sure how to navigate back to My Projects. We've made this more intuitive with a **main menu dropdown** in the top-left corner that takes you to My Projects and several other common functions.
+
+  <Frame caption="New main menu dropdown in the top-left corner">
+    <img src="/images/releases/1.57/main_menu.gif" alt="Opening the main menu dropdown from the top-left corner" />
+  </Frame>
+
+  ### User Profile & Settings
+
+  Your user profile and password are now accessible from the top-right corner of the screen.
+
+  <Frame caption="User profile and settings in the top-right corner">
+    <img src="/images/releases/1.57/user_menu.gif" alt="Opening the user menu from the top-right corner" />
+  </Frame>
+
+  ### Filters
+
+  All Filters are now accessible directly in the Project Panel — no more jumping screens to adjust a constraint.
+
+  <Frame caption="All filters accessible inside the Project Panel">
+    <img src="/images/releases/1.57/Filters1.gif" alt="All filters available inside the Project Panel" />
+  </Frame>
+
+  Toggle filters on and off with a single click.
+
+  <Frame caption="Toggling filters on and off">
+    <img src="/images/releases/1.57/filters2.gif" alt="Toggling filters on and off in the panel" />
+  </Frame>
+
+  Adjust filter values right in the panel, without opening a dialog.
+
+  <Frame caption="Adjusting filter values in place">
+    <img src="/images/releases/1.57/filters3.gif" alt="Adjusting filter values directly in the Project Panel" />
+  </Frame>
+
+  Or edit every filter at once in the side panel.
+
+  <Frame caption="Editing every filter at once in the side panel">
+    <img src="/images/releases/1.57/filters4.gif" alt="Editing all filters at once from the side panel" />
+  </Frame>
+
+  ### Edit Assumptions in the Side Panel
+
+  Edit all of your project assumptions by clicking the **Edit Assumptions** button in the variant popup. Your changes are reflected across every variant in the project.
+
+  <Frame caption="Editing project assumptions from the variant popup">
+    <img src="/images/releases/1.57/Assumptions.gif" alt="Editing project assumptions in the side panel" />
+  </Frame>
+
+  ### Non-Guestroom Program Option Labels
+
+  Program option labels have been refined to make non-guestroom program areas easier to scan and understand at a glance.
+
+  <Frame caption="Refined program option labels">
+    <img src="/images/releases/1.57/program_options_labels.png" alt="Updated non-guestroom program option labels" />
+  </Frame>
+
+  ## Brand Updates
+
+  ### Choice Hotels — Cambria
+
+  Cambria, Choice Hotels' flagship upscale brand, is now live on Parafin. Our AI-powered engine instantly delivers brand-compliant Cambria layouts, budgets, and proformas — giving you a faster, clearer go/no-go on every potential site.
+
+  <Frame caption="Cambria is now live in the brand selector">
+    <img src="/images/releases/1.57/Cambria.gif" alt="Cambria brand in the Parafin brand selector" />
+  </Frame>
+
+  <Frame caption="A generated Cambria variant">
+    <img src="/images/releases/1.57/Cambria.png" alt="A generated Cambria hotel variant" />
+  </Frame>
+
+  ### Marriott brands — reminder
+
+  SpringHill Suites and Aloft are the newest in a wave of Marriott brands now fully generative in Parafin. Instantly generate unique, optimized variants for your site, tailored to Marriott's brand standards and your project goals.
+
+  <Frame caption="Marriott brands available in Parafin">
+    <img src="/images/releases/1.57/Marriott_Brands.gif" alt="Marriott brand variants generated in Parafin" />
+  </Frame>
 </Update>
