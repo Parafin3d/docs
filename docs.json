@@ -42,17 +42,17 @@
             ]
           },
           {
-            "group": "Working with designs",
+            "group": "Working with projects",
             "pages": [
-              "working-with-designs/generating-designs",
-              "working-with-designs/assumptions",
-              "working-with-designs/filtering-sorting",
-              "working-with-designs/executive-summary",
-              "working-with-designs/export",
-              "working-with-designs/3d-viewer",
-              "working-with-designs/site-plan-viewer",
-              "working-with-designs/floor-plans",
-              "working-with-designs/brand-contact"
+              "working-with-projects/generating-designs",
+              "working-with-projects/assumptions",
+              "working-with-projects/filtering-sorting",
+              "working-with-projects/executive-summary",
+              "working-with-projects/export",
+              "working-with-projects/3d-viewer",
+              "working-with-projects/site-plan-viewer",
+              "working-with-projects/floor-plans",
+              "working-with-projects/brand-contact"
             ]
           },
           {
