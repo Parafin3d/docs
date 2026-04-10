@@ -1,16 +1,73 @@
 ---
 title: "Define the site area"
-description: "Select parcels on the map to define the area of your opportunity."
+description: "Select parcels, draw a custom boundary, or edit an existing shape to define your site."
 ---
 
-Click parcels on the map to add them to your site. Click a parcel again to remove it. Zoom in or out to confirm you're selecting the right geometry.
+{/* Figma source: Select parcel https://www.figma.com/design/hevlKEYRL9U8bXkXiKqMky/Parafin?node-id=11328-92348 */}
+{/* Figma source: Draw polygon https://www.figma.com/design/hevlKEYRL9U8bXkXiKqMky/Parafin?node-id=11328-92954 */}
+{/* Figma source: Edit polygon https://www.figma.com/design/hevlKEYRL9U8bXkXiKqMky/Parafin?node-id=11328-93325 */}
+{/* NOTE: Figma sidebar still shows Zoning/Setback. Replace images from staging. */}
 
-<Frame>
-  <img src="/images/support/legacy/launching/project-site-area.jpg" alt="Selecting parcels on the map" />
+Three ways to define a site boundary: select parcels from the map, draw a shape by hand, or edit an existing boundary. The left panel shows the project name, address, acreage, zoning code, and a **Site Boundary** section that lists selected parcels.
+
+## Select parcels
+
+Click parcels on the map to add them to your site. Click a selected parcel again to remove it. A tooltip on the right side of the screen reads **Select Parcel** and confirms you can select parcels to add or remove from the project site.
+
+<Frame caption="Selecting parcels on the map">
+  <img src="/images/help/launching/site-parcel-select.png" alt="Site step showing selected parcels with parcel details in the left panel" />
 </Frame>
 
-<Note>
-  Parcels must be adjacent. If your opportunity spans non-adjacent parcels, Parafin will not let you proceed.
-</Note>
+The panel shows the address, area, and zoning code for the selected parcels. A toolbar at the top of the map provides undo, redo, and other editing tools.
 
-If the parcel geometry doesn't match your site exactly, [draw a custom boundary](/launching-a-project/drawing-site-area) instead.
+## Draw a boundary
+
+When the available parcels don't match the actual shape of your site, draw the boundary by hand. A tooltip on the right reads **Draw Polygon** with instructions: click on the map to start a polygon and add points, then double-click to finish.
+
+<Steps>
+  <Step title="Select the draw tool">
+    Choose the draw tool from the toolbar at the top of the map.
+  </Step>
+  <Step title="Click to add points">
+    Click each corner of your site to place a point.
+  </Step>
+  <Step title="Double-click to close">
+    Double-click the final point to close the shape.
+  </Step>
+</Steps>
+
+<Frame caption="Drawing a custom site boundary">
+  <img src="/images/help/launching/site-draw-boundary.png" alt="Draw Polygon mode showing instructions tooltip" />
+</Frame>
+
+A small diagram in the tooltip shows how the polygon takes shape as you add points.
+
+## Edit a boundary
+
+After selecting parcels or drawing a shape, switch to edit mode to fine-tune the boundary. A tooltip on the right reads **Edit Polygon**: click and drag points on your parcel to edit. Blue dots on the boundary are drag handles.
+
+<Frame caption="Editing an existing site boundary">
+  <img src="/images/help/launching/site-edit-boundary.png" alt="Edit Polygon mode showing draggable vertex handles on the boundary" />
+</Frame>
+
+Drag any blue dot to reshape the boundary. The panel on the left updates the acreage as you adjust.
+
+## Warning surfaces
+
+Parafin warns you about potential issues with your site boundary. When a warning appears, the **Next** button is disabled until you resolve the issue.
+
+### Parcel adjacency
+
+If you select parcels that are not adjacent to each other, a red **Parcel Adjacency** warning appears in the Site Boundary section: "Selected parcels must be adjacent to form a contiguous site. Add or remove parcels, or adjust the boundary geometry to proceed."
+
+<Frame caption="Parcel Adjacency warning in the Site Boundary section">
+  <img src="/images/help/launching/warning-site-boundary-with-error.png" alt="Site Boundary section showing red Parcel Adjacency warning card above the list of selected parcels" />
+</Frame>
+
+### Address conflicts
+
+If the site boundary doesn't align with the entered address, a warning icon appears next to the address field. Click the address to see a list of suggested alternatives that better match the selected parcels.
+
+<Frame caption="Address conflict with suggested alternatives">
+  <img src="/images/help/launching/warning-address-conflict.png" alt="Address field with orange warning icon and dropdown showing suggested alternative addresses" />
+</Frame>

@@ -3,23 +3,30 @@ title: "Using the Zoning Panel"
 description: "Find every available zoning detail for your site in one place — district codes, dimensional controls, and direct links to municipal sources."
 ---
 
-The Zoning Panel brings every available zoning detail for your site into a single, easy-to-navigate location. Instead of juggling browser tabs and PDFs from municipal websites, you can review district codes, dimensional controls, and direct links to the source — all from inside your project.
+{/* Figma source: V2 (zoning awareness surface) https://www.figma.com/design/hevlKEYRL9U8bXkXiKqMky/Parafin?node-id=11357-98251 */}
+{/* Figma source: Viever Zoning (full panel) https://www.figma.com/design/hevlKEYRL9U8bXkXiKqMky/Parafin?node-id=11596-100411 */}
+{/* Jira source: PAR-2947 (zoning awareness Info Surface), PAR-2949 (Filters split button and Zoning button), PAR-3109 (Zoning Label and Button) */}
 
-This guide walks you through opening the panel, reading what's inside, and jumping to the underlying municipal zoning code.
+The Zoning Panel brings every available zoning detail for your site into a single location. Review district codes, permitted uses, dimensional controls, and direct links to the municipal source, all from inside your project.
 
-## Open the Zoning Panel
+## Zoning awareness
 
-<Steps>
-  <Step title="Open a project with a defined site">
-    Start from any project where you've already defined a site location. The panel needs a parcel to query against.
-  </Step>
-  <Step title="Click into project information">
-    Click anywhere in the **project information section** at the top of the screen.
-  </Step>
-  <Step title="Expand the Zoning section">
-    Expand the **Zoning** section. The panel slides open with all available zoning data for your selected parcel.
-  </Step>
-</Steps>
+When zoning data is available for your site, a blue information card appears in the project panel with the heading **Zoning Data Available For This Site**. The card explains that Parafin provides local zoning data for height, FAR, open space, and setbacks, and that you can use this information to adjust filters and define building setbacks.
+
+Two buttons on the card let you act immediately:
+
+- **Review zoning**: opens the full Zoning Panel
+- **Ignore For Now**: dismisses the card and continues with your current settings
+
+<Frame caption="Zoning data available notification in the project panel">
+  <img src="/images/help/tutorials/zoning-awareness.png" alt="Blue info card showing Zoning Data Available For This Site with Review zoning and Ignore For Now buttons" />
+</Frame>
+
+The card appears below the brand information and above the variant list. It stays visible until you click one of the two buttons.
+
+## Opening the Zoning Panel
+
+Click the **Zoning** button in the project panel (next to the **Constraints** button) to open the full Zoning Panel at any time. The panel opens in the center of the screen with the heading **Street Frontage and Setbacks**.
 
 <Note>
   If your parcel doesn't show zoning data, your jurisdiction may not yet be in the Zoneomics feed. [Let us know](mailto:support@parafin.ai) and we'll add it in the next weekly update.
@@ -27,30 +34,42 @@ This guide walks you through opening the panel, reading what's inside, and jumpi
 
 ## What's in the panel
 
-Inside the panel you'll see:
+The Zoning Panel shows the site address, acreage, and zoning code at the top, then expands into two main sections:
+
+<Frame caption="Zoning Panel showing district details, permitted uses, and constraint controls">
+  <img src="/images/help/tutorials/zoning-panel-detail.png" alt="Zoning Panel with zoning code MU-3A, permitted uses showing Lodging/Hotel as of right, and constraint controls for FAR, height, open space, and setbacks" />
+</Frame>
+
+The panel has three areas: zoning details at the top, permitted uses in the middle, and constraint controls at the bottom.
+
+### Zoning details
 
 | Field | What it tells you |
 | --- | --- |
-| **District code** | The official zoning designation for your parcel (e.g., R-3, C-1, M-2) |
-| **Description** | A plain-language summary of what the district allows |
-| **Zoning type** | The category — residential, commercial, mixed-use, etc. |
-| **Zoning code link** | A direct link to the municipal source for the full code |
-| **Dimensional controls** | The key constraints that drive feasibility: FAR, max building height, minimum open space, and setback requirements |
+| **Zoning Code** | The official zoning designation for your parcel (e.g., MU-3A) |
+| **Zoning Description** | A plain-language summary (e.g., Mixed Use) |
+| **Zoning Type** | The broad category: residential, commercial, mixed, etc. |
+| **Zoning Subtype** | A more specific classification within the type |
+| **Zoning Code Link** | A direct link to the municipal source for the full code |
 
-## Open the source code
+### Permitted uses
 
-Click the **Zoning Code Link** to open the full municipal code for your parcel in a new tab. This takes you straight to the relevant section of the city or county's published zoning ordinance — no manual searching required.
+The **Permitted Uses** section shows whether your intended use (Lodging / Hotel) is allowed in the zoning district. A green **As of Right** badge means the use is permitted without special approval. Click **View All Uses** to see the full list of permitted uses for the district.
+
+### Constraint controls
+
+Below the zoning details, each dimensional constraint shows a **Suggested Zoning** value and a toggle to apply it:
+
+- **Max Floor Area Ratio (FAR)**: the maximum ratio of building area to site area
+- **Max Building Height**: the maximum building height allowed (e.g., 30 ft)
+- **Min. Open Space Ratio**: the minimum percentage of the site that must remain open
+- **Front Yard Setback**: the required distance from the front property line
+- **Side Yard Setback**: the required distance from the side property lines
+
+Each constraint has a **toggle** to enable or disable it and an **edit button** to enter your own value. Zoning sets the baseline. You can make constraints more stringent, but not less stringent than the zoning code allows.
 
 <Tip>
-  Bookmark frequently-used jurisdictions in your browser. The code links are stable and update with the parcel data.
+  Click the **Zoning Code Link** to open the full municipal code in a new tab. Bookmark frequently-used jurisdictions. The links are stable and update with the parcel data.
 </Tip>
 
-## Applying zoning constraints to your project
-
-The Zoning Panel exposes a set of **zoning filters** for FAR, maximum building height, and minimum open space. Each constraint displays a suggested zoning value — apply it as-is, enter your own value using the text field or slider, or turn the control off for that metric. Changes update your project assumptions in real time, and variant generations adjust accordingly.
-
-<Frame caption="Applying FAR, height, and open-space constraints from the zoning panel">
-  <img src="/images/releases/1.61/control_filters.gif" alt="Toggling and applying zoning filters in the panel" />
-</Frame>
-
-For full filter and sort controls (not just zoning-derived ones), see [Filtering and sorting designs](/working-with-projects/filtering-sorting). For setback editing and side labeling, see [Setbacks and adjacency](/launching-a-project/setbacks-adjacency).
+For the full constraint controls (not just zoning-derived ones), see [Constraints and sorting](/working-with-projects/constraints-sorting). For setback editing and side labeling, see [Setbacks and adjacency](/working-with-projects/setbacks-adjacency).

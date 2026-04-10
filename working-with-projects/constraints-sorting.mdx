@@ -1,0 +1,51 @@
+---
+title: "Constraints and sorting"
+description: "Apply design constraints and sort by financial metrics to find the best options for your site."
+---
+
+{/* Figma source: V1 Full Info (project panel) https://www.figma.com/design/hevlKEYRL9U8bXkXiKqMky/Parafin?node-id=10577-110117 */}
+{/* Figma source: Design Constraints side sheet (Building On) https://www.figma.com/design/hevlKEYRL9U8bXkXiKqMky/Parafin?node-id=12383-81688 */}
+{/* Jira source: PAR-3106 (All Filters → Constraints), PAR-2852 (zoning checkmark), PAR-3108 (side sheet adjustments) */}
+
+Parafin generates thousands of candidate designs per site. The **Constraints** button in the project panel opens the **Design Constraints** side sheet where you narrow the set to designs that meet your requirements. The **Zoning** button next to it opens the [Zoning Panel](/tutorials/zoning-panel) for district details and zoning-only constraints like FAR.
+
+<Frame caption="Project panel showing Constraints and Zoning buttons with variant list">
+  <img src="/images/help/working/project-panel-full.png" alt="Project panel with Constraints and Zoning buttons, variant ranking list, and variant detail" />
+</Frame>
+
+## Design Constraints side sheet
+
+Click the **Constraints** button to open the **Design Constraints** side sheet. Sections include:
+
+- **Site Open Space**: minimum percentage of the site that must remain open
+- **Building**: number of floors and maximum building height
+- **Room Mix**: percentage ranges for Single, Double, and Suite room types
+- **Program Options**: building entry type, meeting rooms, pool
+- **Budget**: development budget range
+
+<Frame caption="Design Constraints side sheet showing the Building section">
+  <img src="/images/help/working/design-constraints-sidesheet.png" alt="Design Constraints side sheet with Building section expanded showing Floors selector and Height slider" />
+</Frame>
+
+In this example, the **Building** section is expanded. The **Floors** selector lets you pick 3, 4, 5, or 6 floors. The **Height** constraint shows the zoning baseline and a histogram of how variants distribute across height values.
+
+## How zoning and design constraints work together
+
+Some constraints appear in both the **Zoning Panel** and the **Design Constraints** side sheet, specifically **maximum building height** and **minimum open space**. When zoning data is available, these constraints show the zoning baseline value (e.g., "Zoning: Max 80ft") and an **Edit Zoning** link.
+
+You can make these constraints **more stringent** than the zoning baseline (e.g., set max height to 60 ft when zoning allows 80 ft), but you cannot make them **less stringent** than what the zoning code allows.
+
+A checkmark next to the value shows whether your setting meets the zoning requirement:
+
+- **At Zoning**: your value matches the zoning baseline exactly
+- **Stricter Than Zoning**: your value is more restrictive than the zoning baseline
+
+Other constraints, like **FAR** and **setbacks**, are managed exclusively in the [Zoning Panel](/tutorials/zoning-panel) and don't appear in the Design Constraints side sheet.
+
+## Sorting variants
+
+The variant list on the left side of the project panel ranks designs by financial metrics. Use the **Ranked by** control to sort by **Yield**, **Key Count**, **Equity Multiple**, or **Budget per Key**. The list reorders in real time.
+
+## Starring variants
+
+Click the star icon next to **Show Favorites** to pin preferred variants to the top of the list regardless of sort order.
