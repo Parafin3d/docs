@@ -44,6 +44,7 @@
           {
             "group": "Working with projects",
             "pages": [
+              "working-with-projects/navigation",
               "working-with-projects/generating-designs",
               "working-with-projects/assumptions",
               "working-with-projects/filtering-sorting",
