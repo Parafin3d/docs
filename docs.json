@@ -36,8 +36,6 @@
               "launching-a-project/project-name",
               "launching-a-project/site-address",
               "launching-a-project/site-area",
-              "launching-a-project/drawing-site-area",
-              "launching-a-project/setbacks-adjacency",
               "launching-a-project/hotel-brand"
             ]
           },
@@ -46,8 +44,10 @@
             "pages": [
               "working-with-projects/navigation",
               "working-with-projects/generating-designs",
+              "working-with-projects/no-results",
+              "working-with-projects/setbacks-adjacency",
               "working-with-projects/assumptions",
-              "working-with-projects/filtering-sorting",
+              "working-with-projects/constraints-sorting",
               "working-with-projects/variant-details",
               "working-with-projects/3d-viewer",
               "working-with-projects/site-plan-viewer",

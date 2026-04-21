@@ -1,0 +1,27 @@
+---
+title: "No results"
+description: "Understand why Parafin returned no designs and what to adjust."
+---
+
+{/* Figma source: No Results Available https://www.figma.com/design/hevlKEYRL9U8bXkXiKqMky/Parafin?node-id=11927-108243 */}
+{/* Jira source: PAR-3064 (No results Information surface) */}
+
+When Parafin cannot generate any designs that satisfy your current combination of filters and assumptions, a **No Results Available** message appears in the project panel. The message explains why generation produced zero results and lists specific things to try.
+
+<Frame caption="No Results Available message with suggested adjustments">
+  <img src="/images/help/working/no-results-surface.png" alt="No Results Available panel showing reasons and action buttons" />
+</Frame>
+
+## What the message tells you
+
+The surface lists the most common reasons and provides a button for each one to take you directly to the relevant setting:
+
+- **The selected site may be too small**: click **Site Boundaries** to expand the site
+- **Parking ratio may exceed site capacity**: click **Parking** to adjust the parking ratio
+- **Program filters may be too stringent**: click **Filters** to widen or disable constraint filters
+- **Zoning limits restricting height, FAR, or open space may be too stringent**: click **Zoning** to relax zoning-derived constraints
+- **Selected brand-specific amenities or layouts may exclude all variants**. Consider switching to a different brand or adjusting non-guestroom program options
+
+<Tip>
+  Start with fewer constraints and add them incrementally. This makes it easier to identify which specific constraint is preventing results.
+</Tip>

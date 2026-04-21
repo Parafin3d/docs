@@ -3,12 +3,58 @@ title: "Changelog"
 description: "What's new in Parafin"
 ---
 
-<Update label="1.62 (preview)" tags={["coming soon", "pcf"]}>
-  ## Project Creation Flow overhaul
+<Update label="1.62" description="April 21, 2026" tags={["feature", "improvement", "pcf", "zoning"]}>
+  ## Redesigned project creation
 
-  We've completely redesigned project creation as a structured 5-step flow with zoning baked in from step one. The new flow feels consistent whether you're creating a project for the first time or editing an existing one.
+  Integrating zoning data meant rethinking what belongs in project creation. The result is a cleaner four-step setup (name, location, site boundaries, brand) followed by **Generate Designs**, with one unified interface that covers creating a project, editing a site, and changing the brand. Setbacks are configured from the project dashboard, where you have the full zoning context.
 
-  Full details when 1.62 ships.
+  <Frame caption="A walkthrough of the new project creation flow">
+    <video autoPlay muted loop playsInline className="w-full aspect-video" src="/images/releases/1.62/pcf_walkthrough.mp4" />
+  </Frame>
+
+  [Learn how to launch a project →](/launching-a-project/overview)
+
+  ## New brand selection screen
+
+  The last step of project creation now opens a full-screen brand grid. Browse every available brand at a glance, filter by hotel family, or turn on the **Generative** filter to show only fully generative brands. The same screen appears when you change brands on an existing project.
+
+  <Frame caption="Browsing, filtering, and selecting a brand">
+    <video autoPlay muted loop playsInline className="w-full aspect-video" src="/images/releases/1.62/brand_dialog.mp4" />
+  </Frame>
+
+  [See how brand selection works →](/launching-a-project/hotel-brand)
+
+  ## Zoning awareness and design constraints
+
+  Two changes to how zoning and filtering work together.
+
+  ### Zoning awareness
+
+  When zoning data is available for your site, a notification card appears in the project panel. Review it right away or dismiss it and come back later via the **Zoning** button.
+
+  <Frame caption="Zoning awareness card in the project panel">
+    <img src="/images/releases/1.62/zoning_awareness.png" alt="Zoning awareness card showing district code and a link to the Zoning Panel" />
+  </Frame>
+
+  ### Constraints, with zoning-aware limits
+
+  What used to be **All Filters** is now **Constraints**, opened as the **Design Constraints** side sheet — same controls for building height, open space, room mix, and more, with a clearer name. When zoning data is available, building height and open space show the zoning baseline: you can set stricter values but not more lenient ones, and checkmarks next to each field confirm compliance.
+
+  <Frame caption="The Design Constraints side sheet">
+    <video autoPlay muted loop playsInline className="w-full aspect-video" src="/images/releases/1.62/design_constraints_sidesheet.mp4" />
+  </Frame>
+
+  [Explore constraints and zoning →](/working-with-projects/constraints-sorting)
+
+  ## Understanding "no results"
+
+  When none of the generated variants fit within your current constraints, a new message explains why and points you to the specific setting to adjust — site boundaries, parking, filters, or zoning limits.
+
+  <Frame caption="No-results surface explaining why variants were excluded">
+    <img src="/images/releases/1.62/no_results_surface.png" alt="No-results information surface with adjustable setting suggestions" />
+  </Frame>
+
+  [Learn more about no-results guidance →](/working-with-projects/no-results)
 </Update>
 
 <Update label="1.61" description="December 30, 2025" tags={["feature", "zoning", "pcf"]}>
@@ -278,7 +324,7 @@ description: "What's new in Parafin"
   Hyatt Studios is the latest brand with [RaaP](https://www.raap.builders/parafin) construction cost estimates available in Parafin. RaaP estimates are tuned to brand-specific materials and finishes and break out costs in CSI MasterFormat® divisions. Previously available for Home2 Suites only.
 
   <Frame caption="RaaP divisional CSI MasterFormat® cost breakdown">
-    <img src="/images/releases/1.52/raap_divisional.png" alt="RaaP divisional cost breakdown for a Hyatt Studios project" />
+    <img src="/images/releases/1.49/raap_divisional.png" alt="RaaP divisional cost breakdown for a Hyatt Studios project" />
   </Frame>
 
   Toggle **RaaP Cost Estimate** on a Hyatt Studios project to switch from $/gsf or $/key estimates to detailed RaaP cost estimates. Pilot access is invite-only.
